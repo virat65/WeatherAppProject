@@ -1,0 +1,116 @@
+/* Main weather card */
+.weather {
+  padding: 40px;
+  border-radius: 10px;
+  place-self: center;
+  background-image: linear-gradient(45deg, #2f4680, #500ae4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative; /* for absolute dropdown */
+}
+
+/* Input field */
+.search-bar input {
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding-left: 25px;
+  color: #626262;
+  background-color: #ebfffc;
+  font-size: 18px;
+  width: 250px;
+}
+
+/* Search icon */
+.search-bar img {
+  width: 50px;
+  background-color: #ebfffc;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 15px;
+}
+
+/* Suggestions dropdown */
+.suggestions {
+  position: absolute;
+  top: 60px; /* adjust based on input height */
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background: #ebfffc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+/* Each suggestion item */
+.suggestion-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #333;
+  font-size: 18px;
+  transition: background 0.2s;
+}
+
+.suggestion-item:hover {
+  background-color: #d1f0eb;
+}
+
+/* Weather icon */
+.weather-icon {
+  width: 150px;
+  margin: 30px 0;
+}
+
+/* Temperature */
+.temperature {
+  color: #fff;
+  font-size: 80px;
+  line-height: 1;
+}
+
+/* Location */
+.location {
+  color: #fff;
+  font-size: 40px;
+}
+
+/* Weather data container */
+.weather-data {
+  width: 100%;
+  margin-top: 40px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Each column inside weather data */
+.weather-data .col {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 22px;
+}
+
+/* Flex container for data */
+.data {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Image fit utility */
+.img-fit {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
